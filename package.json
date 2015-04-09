@@ -1,5 +1,5 @@
 {
-  "name": "grunt-contrib-coffee",
+  "name": "grunt-contrib-cophee",
   "description": "Compile CoffeeScript files to JavaScript",
   "version": "0.13.0",
   "author": {
