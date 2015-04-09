@@ -14,12 +14,12 @@ module.exports = function(grunt) {
   var _ = require('lodash');
   var uriPath = require('uri-path');
 
-  grunt.registerMultiTask('coffee', 'Compile CoffeeScript files into JavaScript', function() {
+  grunt.registerMultiTask('cophee', 'Compile CopheeScript files into PHP', function() {
     var options = this.options({
       bare: false,
       join: false,
       sourceMap: false,
-      joinExt: '.src.coffee',
+      joinExt: '.src.cophee',
       separator: grunt.util.linefeed
     });
     var actionCounts = {
@@ -178,7 +178,7 @@ module.exports = function(grunt) {
     }
 
     try {
-      return require('coffee-script').compile(code, coffeeOptions);
+      return require('cophee-script').compile(code, coffeeOptions);
     } catch (e) {
       if (e.location == null ||
           e.location.first_column == null ||
